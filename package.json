@@ -1,0 +1,29 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:web": "yarn workspace react dev",
+    "build:web": "yarn workspace react build",
+    "start:web2": "yarn workspace react2 dev",
+    "build": "yarn workspace react build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:native": "yarn workspace native-app start",
+    "start:android": "yarn workspace native-app android"
+  },
+  "workspaces": {
+    "packages": [
+      "react2",
+      "react",
+      "common",
+      "native-app"
+    ],
+    "nohoist": [
+      "**/**"
+    ]
+  },
+  "author": "",
+  "license": "ISC"
+}
